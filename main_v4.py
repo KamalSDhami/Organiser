@@ -130,7 +130,7 @@ def get_download_folder():
     # Check if Android or ARM-based Linux
     if device_type == "android" or is_arm_machine:
         device_os = "android"
-        download_folder = "/data/data/com.termux/files/home/storage/downloads"
+        download_folder = os.path.join(os.environ["HOME"],"storage/shared/Download")
     elif device_type == "windows":
         device_os = "windows"
         download_folder = os.path.join(os.environ["APPDATA"], "Downloads")
@@ -188,4 +188,3 @@ def organiser(folder_path):
 
 organiser(download_folder)
 print("sucessfull")
-
