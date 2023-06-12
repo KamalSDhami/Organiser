@@ -108,7 +108,7 @@ def manual_os_identification ():
 def Verifing_OS (device_os,download_folder):
     #verifing the detected os is right 
     
-    os_verification = input(f"os detected\nos :{device_os}\nis it right (y/n)").lower()
+    os_verification = input(f"os Detected\nos :{device_os}\nIs it right (Y/n)").lower() or "y"
     if os_verification == "y":
         return download_folder
     elif os_verification == "n":
@@ -117,11 +117,9 @@ def Verifing_OS (device_os,download_folder):
         print('error :invalid input')
         Verifing_OS()
 
-def get_download_folder():
-    """Returns the download folder location for the current device."""
-
     # Get the device type
-    device_type = platform.system().lower()
+def get_download_folder(device_type = platform.system().lower()):
+    """Returns the download folder location for the current device."""
 
       # Check if ARM-based machine
     is_arm_machine = "arm" in platform.machine().lower() or "aarch" in platform.machine().lower()
@@ -154,7 +152,7 @@ download_folder = get_download_folder()
 
 
 #function to  organise file
-def organiser(folder_path):
+def organiser(folder_path,sub_folder_organise = False):
     #find all the file on the folde and full path to the file 
     for file_name in os.listdir(folder_path):
         file_path = os.path.join(folder_path,file_name)
@@ -183,8 +181,11 @@ def organiser(folder_path):
             shutil.move(file_path, new_file_path)
         
         elif os.path.isdir(file_path):
-            organiser(file_path)
+            if sub_folder_organise == True:
+                organiser(file_path)
+            else :
+                pass
             
-
-organiser(download_folder)
+sub_folder = input("Do you want to also transfer the subfolder data (y/N) : ")
+organiser(download_folder,True if sub_folder.lower() =="y" else False)
 print("sucessfull")
