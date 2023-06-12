@@ -3,7 +3,6 @@
 
 This is a python project it will Organise Your File.
 
-
 ## For Linux
 
 **To Run this project on Linux use the folloing commands.**
@@ -11,9 +10,11 @@ This is a python project it will Organise Your File.
 **To update the repo :**
 
 for debian based distro :
+
 ```bash
     sudo apt update && sudo apt upgrade
 ```
+
 or
 
 for Arch based distro :
@@ -27,45 +28,51 @@ for Arch based distro :
 ```bash
     git clone https://github.com/KamalSDhami/Organiser
 ```
+
 going to project directory :
 
-```bash 
+```bash
     cd Organiser
 ```
+
 executing the project :
 
 ```bash
     python ./main.py
 ```
 
+## For Termux
 
-## For Termux 
 **To update the repo :**
 
 for debian based distro :
+
 ```bash
     sudo apt update && sudo apt upgrade
 ```
+
 **Cloning the project directory :**
 
 ```bash
     git clone https://github.com/KamalSDhami/Organiser
 ```
+
 going to project directory :
 
-```bash 
+```bash
     cd Organiser
 ```
+
 executing the project :
 
 ```bash
     python ./main.py
 ```
-## 🚀 About Me
-I'm a developer from India..
 
+## 🚀 About M
+
+I'm a developer from India..
 
 ## Feedback
 
 If you have any feedback, please reach out to us at devdhami765@gmail.com
-
