@@ -64,19 +64,22 @@ extension_mapping = {
     '.rb': 'ruby',
 
     # Archive extensions
+    '.7z': 'archive',
+    '.bz2': 'archive',
+    '.gz': 'archive',
+    '.iso': 'archive',
     '.rar': 'archive',
     '.tar': 'archive',
     '.zip': 'archive',
 }
 
-'''
-def manual_os_identification ():
-     # Operating system options
+def manual_os_identification():
+    # Operating system options
     options = {
-        "1": os.path.join(os.environ["APPDATA"], "Downloads"),  # Windows
-        "2": os.path.join(os.environ["HOME"], "Downloads"),     # macOS
-        "3": os.path.join(os.environ["HOME"], "Downloads"),      # Linux
-        "4": os.path.join(os.environ["EXTERNAL_STORAGE"], "Download"), #Android
+        "1": os.path.join(os.environ.get("APPDATA", ""), "Downloads"),  # Windows
+        "2": os.path.join(os.environ.get("HOME", ""), "Downloads"),     # macOS
+        "3": os.path.join(os.environ.get("HOME", ""), "Downloads"),     # Linux
+        "4": os.path.join(os.environ.get("EXTERNAL_STORAGE", ""), "Download"), # Android
     }
 
     # Display OS options to the user
@@ -102,8 +105,7 @@ def manual_os_identification ():
         exit()
     else:
         print("Invalid choice. Using default download folder.")
-        return os.path.join(os.environ["EXTERNAL_STORAGE"], "Download")
-        '''
+        return os.path.join(os.environ.get("EXTERNAL_STORAGE", ""), "Download")
     
 def Verifing_OS (device_os,download_folder):
     #verifing the detected os is right 
@@ -112,7 +114,7 @@ def Verifing_OS (device_os,download_folder):
     if os_verification == "y":
         return download_folder
     elif os_verification == "n":
-        return input("enter the path to your download folder")
+        return manual_os_identification()
     else:
         print('error :invalid input')
         Verifing_OS()
