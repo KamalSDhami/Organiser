@@ -71,6 +71,11 @@ extension_mapping = {
     '.rar': 'archive',
     '.tar': 'archive',
     '.zip': 'archive',
+    
+    #Other files extension
+    '.vsix': 'vscode-extension',
+    '.whl': 'python-extension',
+    
 }
 
 def manual_os_identification():
