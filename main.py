@@ -75,6 +75,7 @@ extension_mapping = {
     #Other files extension
     '.vsix': 'vscode-extension',
     '.whl': 'python-extension',
+    '.apk': 'Apps',
     
 }
 
