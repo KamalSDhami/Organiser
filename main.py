@@ -62,6 +62,7 @@ extension_mapping = {
     '.js': 'javascript',
     '.py': 'python',
     '.rb': 'ruby',
+    '.bat': 'Script',
 
     # Archive extensions
     '.7z': 'archive',
@@ -72,10 +73,47 @@ extension_mapping = {
     '.tar': 'archive',
     '.zip': 'archive',
     
+    #gamefiles
+    ".gba": "Game-ROM",
+    ".nes": "Game-ROM",
+    ".sfc": "Game-ROM",
+    ".smc": "Game-ROM",
+    ".gen": "Game-ROM",
+    ".bin": "Game-ROM",
+    ".iso": "Game-ROM",
+    ".cue": "Game-ROM",
+    ".md": "Game-ROM",
+    ".cue": "Game-ROM",
+    ".iso": "Game-ROM",
+    ".nds": "Game-ROM",
+    ".3ds": "Game-ROM",
+    ".xci": "Game-ROM",
+    ".cia": "Game-ROM",
+    ".psx": "Game-ROM",
+    ".ps1": "Game-ROM",
+    ".ps2": "Game-ROM",
+    ".v64": "Game-ROM",
+    ".z64": "Game-ROM",
+    ".u64": "Game-ROM",
+    ".pce": "Game-ROM",
+    ".chd": "Game-ROM",
+    ".rom": "Game-ROM",
+    ".bin": "Game-ROM",
+    ".mds": "Game-ROM",
+    ".cue": "Game-ROM",
+    ".img": "Game-ROM",
+    ".md": "Game-ROM",
+    ".a65": "Game-ROM",
+    ".gg": "Game-ROM",
+    ".ggc": "Game-ROM",
+    ".sega": "Game-ROM",
+    
+    
     #Other files extension
     '.vsix': 'vscode-extension',
     '.whl': 'python-extension',
     '.apk': 'Apps',
+    
     
 }
 
