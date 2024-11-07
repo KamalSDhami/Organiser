@@ -111,8 +111,10 @@ extension_mapping = {
     #App's installer
     '.apk': 'Mobile-Apps',
     '.exe' :'Win-Apps',
+    '.msi' : 'Win-Apps',
     '.deb' : 'linux-Apps',
-    '.rpm' : 'linux-Apps',
+    '.rpm' : 'Linux-Apps',
+    '.tar.xz': 'Linux-Apps',
     
     #Other files extension
     '.vsix': 'vscode-extension',
