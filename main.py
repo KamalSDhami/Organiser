@@ -108,12 +108,15 @@ extension_mapping = {
     ".ggc": "Game-ROM",
     ".sega": "Game-ROM",
     
+    #App's installer
+    '.apk': 'Mobile-Apps',
+    '.exe' :'Win-Apps',
+    '.deb' : 'linux-Apps',
+    '.rpm' : 'linux-Apps',
     
     #Other files extension
     '.vsix': 'vscode-extension',
     '.whl': 'python-extension',
-    '.apk': 'Apps',
-    
     
 }
 
